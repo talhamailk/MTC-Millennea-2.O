@@ -1,0 +1,511 @@
+
+<!DOCTYPE html>
+<html lang="en" class="webmadewell">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories And Rules</title>
+  <link rel="stylesheet" href="css/conduct.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Matemasie&display=swap" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Responsive style -->
+    <link href="css/conduct-responsive.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="images/Untitled.png" type="">
+
+</head>
+<body>
+
+  <!-- Header section starts -->
+   
+<header class="header_section">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg custom_nav-container">
+      <a class="navbar-brand" href="index.html">
+        <span>
+          <img style="width: 50px;" src="Images/registration/logo.jpg" class="vignette"> TCS MTC
+        </span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class=""> </span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="conduct.html">Categories <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.instagram.com/bhs.sportsfest24/">Instagram</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="conduct.html">Code of Conduct</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- End header section -->
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <style>
+    body {
+        font-family: "Comfortaa", sans-serif;
+        color: rgb(255, 255, 255);
+        background-color: #011657;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    h1 {
+        font-family: "AbeeZee";
+        font-size: 70px;
+        text-align: center;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 8px #ffffff;
+        border-bottom: 4px solid white;
+        display: inline-block;
+        padding: 10px 20px;
+    }
+
+    .content {
+        display: flex;
+        margin: 20px 0;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .sidebar {
+        padding: 20px;
+        overflow-y: auto;
+        width: 30%;
+        border-right: 1px solid white;
+    }
+
+    .sidebar div {
+        cursor: pointer;
+        padding: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        transition: all 0.3s;
+        border-radius: 5px;
+    }
+
+    .sidebar div.active-option,
+    .sidebar div:hover {
+        background-color: rgb(146, 192, 238);
+        color: #00fff2;
+    }
+
+    .main-content {
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 70%;
+    }
+
+    /* .image-box {
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            margin: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+        } */
+        
+    .rules {
+        width: 300px;
+    }
+
+    .rules h2 {
+        margin-top: 0;
+        text-shadow: 1px 1px 5px #000000;
+    }
+
+    .rules ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .rules li {
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 5px #000000;
+    }
+
+    /* Media queries for mobile */
+/* Media queries for mobile */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 20px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        border-right: none;
+        border-bottom: 1px solid white;
+        width: 90%;
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 90%;
+    }
+
+    /* .image-box {
+      max-width: 300px;
+      height: auto;
+    }
+
+    .image-box, .rules {
+        margin: 10px 0;
+    } */
+}
+
+
+</style>
+</head>
+
+
+
+  
+<body>
+<div class="container">
+    <h1>Categories</h1>
+    <div class="content">
+        <div class="sidebar">
+          <div class="active-option" id="cricket-option">Futsal</div>
+
+            <div>Badminton</div>
+            <div>Chess</div>
+            <div>Table Tennis</div>
+            <div>Ludo</div>
+            <div>Tug of War</div>
+            <div>E-Gaming</div>
+           
+        </div>
+        <div class="main-content">
+            <div class="image-box" id="image-content"></div>
+            <div class="rules" id="rules-content">
+                <h2>Boys and Girls</h2>
+                <ul>
+                    <li>1. 10 MINUTE MATCH - 2 HALVES OF 5 MINUTES</li>
+                    <li>2. 5 A-SIDE WITH 3 SUBSTITUTIONS'</li>
+                    <li>3.  PENALTY SHOOTOUT (3 EACH) TO DECIDE A TIE</li>
+                    <li>4. NO DIRECT GOALS FROM FREE-KICKS/ KICK-INS</li>
+                    <li>5. NO OFFSIDES</li>
+                    <li>6. THE REFEREES DECISION IS FINAL, ANY MISCONDUCT BY A DELEGATE WILL LEAD TO DISQUALIFICATION OF THE TEAM',</li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
+
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-latest.min.js'></script><script  src="js/conduct.js"></script>
+    <!-- info section -->
+  
+    <section class="info_section layout_padding2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 info_col">
+            <div class="info_contact">
+              <h4>
+                Address
+              </h4>
+              <div class="contact_link_box">
+                <a href="https://maps.app.goo.gl/5SvMtxPyddNvgxW47">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <span>
+                    Location
+                  </span>
+                </a>
+                <a href="">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span>
+                    Call +923104484396
+                  </span>
+                </a>
+                <a href="">
+                  <span>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="info_social">
+              <a href="">
+  
+              <a href="">
+                <i class="" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 info_col">
+            <div class="info_detail">
+              <h4>
+                Info
+              </h4>
+              <p>
+                202 M-Block The City School Model Towm Campus,
+                Lahore, Punjab, Pakistan
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-2 mx-auto info_col">
+            <div class="info_link_box">
+              <h4>
+                Links
+              </h4>
+              <div class="info_links">
+                <a class="active" href="https://www.instagram.com/mtcmillennia2.0/?igsh=MWl1cmRhbTc5d2dkNg%3D%3D">
+                  Instagram
+                </a>
+                <a class="" href="index.html">
+                  Home
+                </a>
+                <a class="" href="conduct.html">
+                  Code of Conduct
+                </a>
+                <a class="" href="registration.html">
+                  Register Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 info_col ">
+            <h4>
+            </h4>
+            <form action="#">
+              <a>MTC Millennia 2.O</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://www.instagram.com/mtcmillennia2.0/?igsh=MWl1cmRhbTc5d2dkNg%3D%3D">MTC Millennia 1.O</a>
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <script>// Sample data for the three options
+    const data = {
+
+        'Futsal': {
+            
+            rules: [
+                '1. 10 MINUTE MATCH - 2 HALVES OF 5 MINUTES',
+                '2. 5 A-SIDE WITH 3 SUBSTITUTIONS',
+                '3. PENALTY SHOOTOUT (3 EACH) TO DECIDE A TIE',
+                '4. NO DIRECT GOALS FROM FREE-KICKS/ KICK-INS',
+                '5. NO OFFSIDES',
+                '6. THE REFEREES DECISION IS FINAL, ANY MISCONDUCT BY A DELEGATE WILL LEAD TO DISQUALIFICATION OF THE TEAM',
+    ,
+                // ...
+            ],
+    
+            title: 'Boys and Girls'
+        },
+        'Badminton': {
+            // image: 'images/Badminton.png', 
+            rules: [
+                '1. EACH MATCH WILL CONSIST OF 1 SET, WITH EACH SET COMPRISING 11 POINTS',
+                '2. FIRST SERVER WILL BE DECIDED THROUGH A TOSS',
+                '3. EACH SERVE MUST DIAGONALLY CROSS THE COURT TO BE CONSIDERED VALID.',
+                '4. EACH SERVE MUST CROSS THE SHORT SERVE LINE, FAILING TO DO SO WILL REWARD THE OPPONENT WITH A POINT.',
+                
+            ],
+    
+            title: 'Boys and Girls'
+        },
+        
+       
+        'E-Gaming': {
+            rules: [
+                'FC 24:',
+                '1. ALL MATCHES WILL BE PLAYED ON PS4',
+                '2. 5 MINUTE HALF',
+                '3. GAMESPEED: NORMAL',
+                '4. INJURIES: OFF',
+                '5. MANUAL KEEPING: OFF',
+                '6. ON THE LEAD OF 3 GOALS THE OPPONENT MAY FORFEIT THE MATCH',
+                '7.RULES MAY ALTER ON MUTUAL AGREEMENT OF THE DELEGATES',
+                '8.DELEGATES MAY BRING THEIR OWN CONTROLLERS',
+                '', '',
+              
+                "Tekken:",
+                '1.EACH MATCH WILL COMPRISE OF 3 ROUNDS',
+                '2.ONLY DEFAULT CHARACTERS CAN BE USED',
+                '3.DEFAULT SETTINGS ARE PERMISSIBLE',
+                '4.IN EXCEPTIONAL CIRCUMSTANCES, REFEREES HAVE THE AUTHORITY TO DEMAND A REMATCH',
+                
+                // ...
+            ],
+    
+            title: 'Boys and Girls'
+        },
+    
+        'Table Tennis': {
+            rules: [
+                '1. SINGLES MATCH',
+                '2. FIRST TO 11 IN STARTING ROUNDS - FIRST TO 13 IN FINALS',
+                '3. AFTER 2 DEUCES, THE SET WILL BE DECIDED BY GOLDEN POINT',
+                '4. DELEGATES MAY BRING THEIR OWN PADDLES',
+              
+                
+                // ...
+            ],
+    
+            title: 'Boys and Girls'
+        },
+    
+        'Ludo': {
+            rules: [
+                '1.  EACH MATCH WILL BE HELD BETWEEN 4 DELEGATES ',
+                '2. DOUBLE DICE',
+                '3. A ROLL OF 6 WILL ALLOW THE PLAYER TO MOVE THEIR PIECE ON THE BOARD',
+                '4. ANOTHER TURN IS GRANTED ON THE ROLL OF 2 SIXES',
+                '5. IF A PIECE LANDS ON THE PIECE OF THE SAME COLOUR, THEY WILL FORM A BLOCK, WHICH CAN ONLY BE MOVED IN EVEN NUMBERS, AND CANNOT BE PASSED OR LANDED UPON BY A PIECE OF A DIFFERENT COLOUR',
+                
+            ],
+            title: 'Mixed Teams'
+        },
+        
+        
+        'Tug of War': {
+            rules: [
+                '1. BEST OF THREE FORMAT FOLLOWED',
+                '2. 8 A-SIDE',
+                '3. THE TEAM THAT DISPLACES THE CENTRE OF THE ROPE WILL BE CONSIDERED THE WINNING TEAM.',
+                '4.  REFEREES DECISION IS FINAL.',
+               
+                
+            ],
+    
+            title: 'Boys and Girls'
+        },
+    
+    
+    
+        'Chess': {
+            rules: [
+                '1. KNOCKOUT MATCHES',
+                '2. 20 MINUTES TOTAL TIME - 10 MINUTES FOR EACH PLAYERS TURN',
+                '3. IF A PLAYER TOUCHES THEIR PIECE, THEY WILL BE FORCED, THEY WILL BE FORCED TO PLAY THAT MOVE, AND IF THEY TOUCH THE OTHER PLAYERS PIECE, THEY WILL BE FORCED TO TAKE IT ',
+                '4. NO SPECTATORS WILL BE ALLOWED TO INFLUENCE THE GAME, ASSISTANCE MAY RESULT IN A 1 MINUTE TIME DEDUCTION.',
+                '5. DIRECT DISQUALIFICATION AFTER 3 FOULS'
+                
+            ],
+            title: 'Mixed Teams'
+        },
+    
+       
+    
+       
+    };
+    
+    // Function to update the content based on the selected option
+    function updateContent(option) {
+        const imageData = data[option].image;
+        const rulesData = data[option].rules;
+        const titleData = data[option].title;
+    
+        // Set the image for the selected option
+        const imageBox = document.getElementById('image-content');
+        imageBox.innerHTML = `<img src="${imageData}" alt="${option}" style="max-width: 100%; height: auto;">`;
+    
+        const rulesContent = document.getElementById('rules-content');
+        rulesContent.innerHTML = `<h2>${titleData}</h2>`; 
+    
+        const ul = document.createElement('ul');
+        for (const rule of rulesData) {
+            const li = document.createElement('li');
+            li.textContent = rule;
+            ul.appendChild(li);
+        }
+        rulesContent.appendChild(ul);
+    }
+    
+    // Add event listeners to the sidebar options
+    const options = document.querySelectorAll('.sidebar div');
+    for (const option of options) {
+        option.addEventListener('click', function() {
+            // Update active state
+            options.forEach(opt => opt.classList.remove('active-option'));
+            option.classList.add('active-option');
+    
+            // Update content
+            updateContent(option.textContent);
+        });
+    }
+    
+      
+      // Function to update the content
+      function updateContent(option) {
+        document.getElementById("image-content").innerHTML = `<img src="${data[option].image}" alt="${option} Image" style="max-width: 100%; height: auto;">`;
+        const rulesList = data[option].rules.map(rule => `<li>${rule}</li>`).join('');
+        document.getElementById("rules-content").innerHTML = `
+            <h2>${data[option].title}</h2>
+            <ul>${rulesList}</ul>
+        `;
+    }
+    
+    // Set initial content for Cricket on page load
+    document.addEventListener("DOMContentLoaded", function() {
+        updateContent('Squid Game');
+    });</script>
+
+</body>
+</html>

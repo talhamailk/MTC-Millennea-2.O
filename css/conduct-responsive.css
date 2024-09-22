@@ -1,0 +1,536 @@
+.webmadewell {
+    background-color: white;
+  }
+  body {
+    margin: 0;
+  }
+  
+  /* Parallex Effect Start */
+  
+  
+  .sample-header {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 200px; /* Added height */
+    background-image: url("../images/background.png"); 
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex; /* Added for centering */
+      align-items: center; /* Center vertically */
+      justify-content: center; /* Center horizontally */
+  }
+  
+  .sample-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(37, 37, 37);
+    opacity: 0.3;
+  }
+  .sample-header-section {
+    position: relative;
+    padding: 15% 0 10%;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    font-family: "Montserrat", sans-serif;
+  }
+  #scroll-h1 {
+    font-weight: 500;
+  
+  }
+  .sample-section-wrap {
+    position: relative;
+    background: rgb(59,59,59);
+    background: linear-gradient(179deg, rgb(37, 37, 37) 0%, #00204a 67%);
+    border-bottom: 1px solid white;
+  }
+  .sample-section {
+    position: relative;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+  }
+  
+  /* Parallex Effect End */
+  
+  :root {
+      --size-header: 2.25rem;
+      --size-accordion-title: 1.25rem;
+      --size-accordion-content: 1rem;
+      --animation-speed: 100;
+      --slide-ease: cubic-bezier(0.86, 0, 0.07, 1);
+      --slide-duration: calc(400ms * 100 / var(--animation-speed));
+      --slide-delay: calc(450ms * 100 / var(--animation-speed));
+      --circle-duration: calc(900ms * 100 / var(--animation-speed));
+  }
+  
+  *,
+  *::before,
+  *::after {
+      position: relative;
+      left: 0;
+      top: 0;
+      box-sizing: border-box;
+  }
+  
+  a,
+  p,
+  h1 {
+      margin: 0;
+  }
+  
+  html {
+      height: 100%;
+  }
+      
+  
+  .text {
+          height: 60px;
+          text-align: center;
+  
+  }
+  
+  html,
+  body {
+      scroll-behavior: smooth;
+      scroll-padding-top: 1rem;
+  }
+  
+  main > h1 {
+      font-size: var(--size-header);
+      margin-bottom: 1.25rem;
+      color: #fff;
+  }
+  
+  ::selection {
+      background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  
+  /* styles.css */
+  .accordion {
+    --circle-x: 1.8rem;
+    --circle-y: 0;
+    --circle-r: 200%;
+    --circle-bg: #fff;
+    color: #000;
+  
+    background-color: var(--circle-bg);
+    max-width: 56ch;
+    margin-bottom: 1rem;
+    border-radius: min(8px, 0.5rem);
+  
+    display: grid;
+    grid-template-rows: 0fr 0fr;
+    transition-timing-function: var(--slide-ease);
+    transition-duration: 200ms, 200ms, var(--slide-duration);
+    transition-property: opacity, box-shadow, grid-template-rows;
+    transition-delay: 0ms, 0ms, var(--slide-delay);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+    opacity: 0.9;
+    opacity: 0;
+    transition: opacity 2s ease-in;
+  }
+  
+  .accordion.visible {
+    opacity: 1;
+  }
+  
+  
+  .accordion:not(:target):hover {
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .accordion:not(:target):active {
+    opacity: 1;
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .accordion,
+  .content {
+    overflow: hidden;
+  }
+  
+  .accordion:target {
+    --d: 90deg;
+    grid-template-rows: 0fr 1fr;
+    transition: grid-template-rows var(--slide-ease) var(--slide-duration) var(--slide-delay);
+  }
+  
+  .wrapper {
+    padding-block: 0 1.05rem;
+    padding-inline: 1.25rem;
+  }
+  
+  .content {
+    font-size: var(--size-accordion-content);
+    line-height: 140%;
+  }
+  
+  .content p {
+    margin-bottom: 1rem;
+  }
+  
+  .content a {
+    color: currentColor;
+    font-weight: 800;
+    text-decoration: underline;
+  }
+  
+  main :last-child,
+  .content :last-child {
+    margin-bottom: 0;
+  }
+  
+  .title a {
+    padding: 1rem 1.25rem;
+    font-size: var(--size-accordion-title);
+    font-weight: 800;
+    color: currentColor;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+  }
+  
+  .title a::before {
+    --chevron-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath fill='white' d='M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z'/%3E%3C/svg%3E");
+    content: "";
+    left: 0;
+    top: 0;
+    width: 0.65rem;
+    aspect-ratio: 320 / 512;
+    display: inline-block;
+    margin-right: 0.75rem;
+    transform: rotate(var(--d, 0deg));
+    transition: transform var(--slide-ease) var(--slide-duration) var(--slide-delay);
+    mask-image: var(--chevron-icon);
+    mask-size: 100% 100%;
+    -webkit-mask-image: var(--chevron-icon);
+    -webkit-mask-size: 100% 100%;
+    background-color: currentColor;
+  }
+  
+  .accordion::before,
+  .accordion::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--circle-bg);
+    mix-blend-mode: difference;
+    transform-style: preserve-3d;
+    transition-timing-function: ease;
+    transition-property: opacity, clip-path, visibility;
+    pointer-events: none;
+    clip-path: circle(var(--r) at var(--circle-x) var(--circle-y));
+    border-radius: inherit;
+    z-index: 4;
+  }
+  
+  .accordion::before {
+    --r: 0%;
+    transition-delay: var(--circle-duration), var(--circle-duration), 0ms;
+    transition-duration: 0ms, var(--circle-duration), 0ms;
+    opacity: 0;
+  }
+  
+  .accordion:target::before {
+    --r: var(--circle-r);
+    transition-delay: 0ms, 0ms, 0ms;
+    transition-duration: 0ms, var(--circle-duration), 0ms;
+    opacity: 1;
+  }
+  
+  .accordion::after {
+    --r: var(--circle-r);
+    transition-delay: 0ms, 0ms, var(--circle-duration);
+    transition-duration: 0ms, var(--circle-duration), 0ms;
+    visibility: hidden;
+    opacity: 1;
+  }
+  
+  .accordion:target:after {
+    --r: 0%;
+    transition-delay: 0ms, 0ms, 0ms;
+    transition-duration: 0ms, 0ms, 0ms;
+    visibility: visible;
+    opacity: 0;
+  }
+  
+  .title a:focus-visible {
+    background-color: hsl(0, 100%, 90%);
+    outline: none;
+  }
+  
+  .accordion:target .title a:focus-visible {
+    background-color: hsl(183, 100%, 93%);
+  }
+  
+  box {
+      padding: 1rem;
+      border: 2px solid #000;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      max-width: 60ch;
+      margin: 1rem auto;
+  }
+  
+  
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Define the keyframes for the fly-in animation */
+  @keyframes flyIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Wrapper to control the position */
+  .wrapper {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Apply the animation to the #special-h1 element */
+  #special-h1 {
+    color: transparent;
+    text-align: center;
+    -webkit-text-stroke: 1px #fff;
+    background-image: linear-gradient(#0ef, #0ef);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -980px 0;
+    transition: background-position 1s, text-shadow 1s;
+    transition-delay: 0.6s, 0s;
+    font-size: 60px;
+    white-space: nowrap;
+    font-family: "New Amsterdam", sans-serif;
+  
+    
+    /* Add the fly-in animation */
+    animation: flyIn 1s ease-out forwards;
+  }
+  
+  @media (max-width: 600px) {
+    #special-h1 {
+      font-size: 15vw; /* Adjust font size for smaller screens */
+      white-space: normal; /* Allows text to break into multiple lines on smaller screens */
+    }
+  }
+  #special-h1:hover {
+    transition: background-position 1s, text-shadow 1s;
+    transition-delay: 0s, 1s;
+    background-position: 0 0;
+    text-shadow: 0 0 10px #0ef, 0 0 20px #0ef, 0 0 40px #0ef, 0 0 80px #0ef,
+      0 0 160px #0ef;
+  }
+  
+  @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap");
+  body {
+    font-family: "Open Sans", sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .layout_padding {
+    padding: 90px 0;
+  }
+  
+  .layout_padding2 {
+    padding: 75px 0;
+  }
+  
+  .layout_padding2-top {
+    padding-top: 75px;
+  }
+  
+  .layout_padding2-bottom {
+    padding-bottom: 75px;
+  }
+  
+  .layout_padding-top {
+    padding-top: 90px;
+  }
+  
+  .layout_padding-bottom {
+    padding-bottom: 90px;
+  }
+  
+  .heading_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  
+  .heading_container h2 {
+    position: relative;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  
+  .heading_container h2 span {
+    color: #00bbf0;
+  }
+  
+  .heading_container p {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  
+  .heading_container.heading_center {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  
+  a,
+  a:hover,
+  a:focus {
+    text-decoration: none;
+  }
+  
+  a:hover,
+  a:focus {
+    color: initial;
+  }
+  
+  .btn,
+  .btn:focus {
+    outline: none !important;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  
+  /*header section*/
+  
+  
+  
+  .navbar-brand span {
+    font-weight: bold;
+    font-size: 24px;
+    color: #ffffff;
+    
+  }
+  
+  
+  .custom_nav-container .navbar-nav {
+    margin-left: auto;
+  }
+  
+  .custom_nav-container .navbar-nav .nav-item .nav-link {
+    padding: 5px 20px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  
+  .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
+    color: #00bbf0;
+  }
+  
+  .custom_nav-container .navbar-nav .nav-item.active .nav-link {
+    font-weight: 600;
+  }
+  
+  .custom_nav-container .nav_search-btn {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    border: none;
+    color: #000000;
+  }
+  
+  .custom_nav-container .nav_search-btn:hover {
+    color: #00bbf0;
+  }
+  
+  .custom_nav-container .navbar-toggler {
+    outline: none;
+  }
+  
+  .custom_nav-container .navbar-toggler {
+    padding: 0;
+    width: 37px;
+    height: 42px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  
+  .custom_nav-container .navbar-toggler span {
+    display: block;
+    width: 35px;
+    height: 4px;
+    background-color: #ffffff;
+    margin: 7px 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    position: relative;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  
+  .custom_nav-container .navbar-toggler span::before, .custom_nav-container .navbar-toggler span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    top: -10px;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  
+  .custom_nav-container .navbar-toggler span::after {
+    top: 10px;
+  }
+  
+  .custom_nav-container .navbar-toggler[aria-expanded="true"] {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  
+  .custom_nav-container .navbar-toggler[aria-expanded="true"] span {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  
+  .custom_nav-container .navbar-toggler[aria-expanded="true"] span::before, .custom_nav-container .navbar-toggler[aria-expanded="true"] span::after {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    top: 0;
+  }
+  
+  /*end header section*/
